@@ -41,3 +41,9 @@ yarn-error.log*
 /playwright-report/
 /blob-report/
 /playwright/*
+
+# Database
+.postgres-data
+
+.vscode/settings.json
+.kiro
