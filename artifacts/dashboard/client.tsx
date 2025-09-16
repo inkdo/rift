@@ -13,9 +13,13 @@ interface DashboardArtifactMetadata {
   // Placeholder for dashboard-specific metadata
 }
 
-export const dashboardArtifact = new Artifact<'dashboard', DashboardArtifactMetadata>({
+export const dashboardArtifact = new Artifact<
+  'dashboard',
+  DashboardArtifactMetadata
+>({
   kind: 'dashboard',
-  description: 'Interactive dashboard with customizable grid layout and widgets',
+  description:
+    'Interactive dashboard with customizable grid layout and widgets',
   initialize: async ({ documentId, setMetadata }) => {
     // Initialize dashboard metadata
     setMetadata({});
@@ -98,7 +102,7 @@ export const dashboardArtifact = new Artifact<'dashboard', DashboardArtifactMeta
   ],
   toolbar: [
     {
-      icon: <MenuIcon />,
+      icon: <MenuIcon size={16} />,
       description: 'Change layout',
       onClick: ({ sendMessage }) => {
         sendMessage({
@@ -113,7 +117,7 @@ export const dashboardArtifact = new Artifact<'dashboard', DashboardArtifactMeta
       },
     },
     {
-      icon: <BoxIcon />,
+      icon: <BoxIcon size={16} />,
       description: 'Reset dashboard',
       onClick: ({ sendMessage }) => {
         sendMessage({

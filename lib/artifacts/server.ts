@@ -1,6 +1,7 @@
 import { codeDocumentHandler } from '@/artifacts/code/server';
 import { sheetDocumentHandler } from '@/artifacts/sheet/server';
 import { textDocumentHandler } from '@/artifacts/text/server';
+import { dashboardDocumentHandler } from '@/artifacts/dashboard/server';
 import type { ArtifactKind } from '@/components/artifact';
 import type { Document } from '../db/schema';
 import { saveDocument } from '../db/queries';
@@ -93,6 +94,7 @@ export const documentHandlersByArtifactKind: Array<DocumentHandler> = [
   textDocumentHandler,
   codeDocumentHandler,
   sheetDocumentHandler,
+  dashboardDocumentHandler,
 ];
 
-export const artifactKinds = ['text', 'code', 'sheet'] as const;
+export const artifactKinds = ['text', 'code', 'sheet', 'dashboard'] as const;

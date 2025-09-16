@@ -36,6 +36,13 @@ export type CustomUIDataTypes = {
   imageDelta: string;
   sheetDelta: string;
   codeDelta: string;
+  dashboardDelta: string;
+  dashboardLayoutChange: string;
+  dashboardWidgetAdd: string;
+  dashboardWidgetUpdate: string;
+  dashboardWidgetRemove: string;
+  dashboardThemeChange: string;
+  dashboardReset: string;
   suggestion: Suggestion;
   appendMessage: string;
   id: string;
